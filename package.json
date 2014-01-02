@@ -1,0 +1,27 @@
+{
+  "name": "geyser",
+  "version": "0.1.0",
+  "description": "Manage global nodejs modules from a config file",
+  "author": "Justin Godesky",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "dependencies": {
+    "commander": "~2.1.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "global",
+    "install",
+    "npm"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "geyser": "lib/geyser.js"
+  }
+}
