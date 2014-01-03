@@ -20,7 +20,7 @@
     "global",
     "install",
     "package",
-    "manager"
+    "manager",
     "npm"
   ],
   "preferGlobal": true,
