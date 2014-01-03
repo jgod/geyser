@@ -1,6 +1,6 @@
 {
   "name": "geyser",
-  "version": "0.1.1",
+  "version": "0.0.2",
   "description": "The global package manager.",
   "author": "Justin Godesky",
   "license": "MIT",
@@ -9,10 +9,12 @@
     "url": "https://github.com/jgod/geyser"
   },
   "dependencies": {
+    "async": "~0.2.9",
     "commander": "~2.1.0",
-    "cli-color": "~0.2.3"
+    "cli-color": "~0.2.3",
+    "promptly": "~0.2.0"
   },
-  "main": "index.js",
+  "main": "geyser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

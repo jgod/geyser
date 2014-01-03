@@ -20,36 +20,25 @@ Geyser depends on [Node](http://nodejs.org) and npm. It should be installed glob
 
 #### Using the dependencies listed in some other .json file
     
-    geyser install -p ./package.json
-
-#### Using a single dependency listed in the current directory's geyser.json
-    
-    geyser installs <package>
-
-#### Using a single dependency listed in some other .json file
-
-    geyser installs <package> -p ./package.json
+    geyser install using ~/Dropbox/dev/node-globals.json
 
 ### Defining a Package
+You must create a `geyser.json` and specify all of your environment's dependencies with optional metadata.
 
-#### geyser.json
-Create a `geyser.json` and specify all of your environment's dependencies with metadata:
+You can interactively create a `geyser.json` with the following command:
+  
+    geyser init
+
+The `geyser.json` defines several options:
+  * `name`: The name of your package.
+  * `version`: A semantic version number. (see [semver](http://semver.org))
+  * `dependencies` [hash]: Packages your package depends on.
+
 
     {
       "name": "my-project",
       "version": "1.0.0",
       "dependencies": {
-        "bower": "latest",
-        "grunt": "0.4.2",
-        "coffee-script": "*"
-      }
-    }
-
-#### Another .json file
-You can leave out name and version, but `dependencies` must change to `globalDependencies`, to avoid likely clashes (like in the case of npm's `package.json`):    
-
-    {
-      "globalDependencies" : {
         "bower": "latest",
         "grunt": "0.4.2",
         "coffee-script": "*"
