@@ -1,34 +1,61 @@
 # Geyser
 
-Manage global nodejs modules from JSON config.
+Geyser is a global package manager for [npm](http://npmjs.org). It offers a generic solution to the problem of **global package management**.
 
-## What?
-Thin wrapper around npm; goal: run useful operations on global dependencies.
-  * Supports installation of versioned, global packages.
-  * JSON format allows dramaless embedding into other config files if desired.
+Geyser runs over npm itself, and is package-agnostic.
 
-Config file standalone.
+## Installing
 
-    /* geyser.json
+Geyser depends on [Node](http://nodejs.org) and npm. It should be installed globally:
+
+    sudo npm install -g geyser
+
+## Usage
+
+### Installing Packages
+
+#### Using the dependencies listed in the current directory's geyser.json
+
+    geyser install
+
+#### Using the dependencies listed in some other .json file
+    
+    geyser install -p ./package.json
+
+#### Using a single dependency listed in the current directory's geyser.json
+    
+    geyser installs <package>
+
+#### Using a single dependency listed in some other .json file
+
+    geyser installs <package> -p ./package.json
+
+### Defining a Package
+
+#### geyser.json
+Create a `geyser.json` and specify all of your environment's dependencies with metadata:
+
     {
-      "globalDependencies": {
+      "name": "my-project",
+      "version": "1.0.0",
+      "dependencies": {
         "bower": "latest",
         "grunt": "0.4.2",
         "coffee-script": "*"
       }
-    }*/
-    
-    geyser install
-    
-Config embedded in an another file.    
-    
-    geyser install -p ./package.json
+    }
 
-## Why?
-  * Quickly get another dev environment up to speed with the same packages  .
-  * Npm doesn't allow specifying global dependencies in package.json.
+#### Another .json file
+You can leave out name and version, but `dependencies` must change to `globalDependencies`, to avoid likely clashes (like in the case of npm's `package.json`):    
 
-## Drawbacks
-  * Hacky workaround
-  * Doesn't support all expected basic features
-  * Very capable of borking global packages if used incorrectly
+    {
+      "globalDependencies" : {
+        "bower": "latest",
+        "grunt": "0.4.2",
+        "coffee-script": "*"
+      }
+    }
+
+## License
+Copyright 2014 Justin Godesky.
+Released under the MIT License.

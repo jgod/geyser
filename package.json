@@ -1,15 +1,16 @@
 {
   "name": "geyser",
-  "version": "0.1.0",
-  "description": "Manage global nodejs modules from a config file",
+  "version": "0.1.1",
+  "description": "The global package manager.",
   "author": "Justin Godesky",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/jgod/geyser"
   },
   "dependencies": {
-    "commander": "~2.1.0"
+    "commander": "~2.1.0",
+    "cli-color": "~0.2.3"
   },
   "main": "index.js",
   "scripts": {
@@ -18,6 +19,8 @@
   "keywords": [
     "global",
     "install",
+    "package",
+    "manager"
     "npm"
   ],
   "preferGlobal": true,
