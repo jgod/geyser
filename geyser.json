@@ -1,7 +1,0 @@
-{
-  "globalDependencies": {
-    "bower": "latest",
-    "grunt": "0.4.2",
-    "coffee-script": "*"
-  }
-}
