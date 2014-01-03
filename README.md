@@ -30,20 +30,22 @@ You can interactively create a `geyser.json` with the following command:
     geyser init
 
 The `geyser.json` defines several options:
+
   * `name`: The name of your package.
   * `version`: A semantic version number. (see [semver](http://semver.org))
   * `dependencies` [hash]: Packages your package depends on.
 
-
-    {
-      "name": "my-project",
-      "version": "1.0.0",
-      "dependencies": {
-        "bower": "latest",
-        "grunt": "0.4.2",
-        "coffee-script": "*"
-      }
+```
+  {
+    "name": "my-project",
+    "version": "1.0.0",
+    "dependencies": {
+      "bower": "latest",
+      "grunt": "0.4.2",
+      "coffee-script": "*"
     }
+  }
+```
 
 ## License
 Copyright 2014 Justin Godesky.
