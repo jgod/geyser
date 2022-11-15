@@ -48,5 +48,6 @@ The `geyser.json` defines several options:
 ```
 
 ## License
-Copyright 2014 Justin Godesky.
-Released under the MIT License.
+
+Copyright Justin Godesky.
+Released under the AGPLv3 License.

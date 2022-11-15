@@ -1,9 +1,9 @@
 {
   "name": "geyser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The global package manager.",
   "author": "Justin Godesky",
-  "license": "MIT",
+  "license": "AGPL-3",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgod/geyser"
